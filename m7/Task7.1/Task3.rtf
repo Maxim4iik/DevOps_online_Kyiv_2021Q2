@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Параметры A B - ways to directories"
+echo "Parametres A B - ways to directories"
 
 diff <(find /$A/ -type f -exec md5sum {} + | sort -k 2 | sed 's/ .*\// /') <(find /$B/ -type f -exec md5sum {} + | sort -k 2 | sed 's/ .*\// /')
